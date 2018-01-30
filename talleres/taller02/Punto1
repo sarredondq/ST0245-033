@@ -1,0 +1,10 @@
+public class Euclides
+{
+    public static int MCD(int p, int q){
+        if(p % q == 0){
+            return  q;
+        } else{
+            return MCD(q, p % q);
+        }
+    }
+}
