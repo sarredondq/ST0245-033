@@ -1,0 +1,22 @@
+ private static void permutationsAux(String base, String s) {
+
+  if (s.equals(""))
+            System.out.println(base);
+        else {
+            if (s.length() == 3) {
+               permutationsAux(base + s.charAt(0), s.substring(1));
+                permutationsAux(base + s.charAt(s.length() - 1), s.substring(0, s.length() - 1));
+                permutationsAux(base + s.charAt(1), s.substring(0, 1) + s.substring(2));
+            } else if (s.length() == 2) {
+                permutationsAux(base + s.charAt(0), s.substring(1));
+                permutationsAux(base + s.charAt(s.length() - 1), s.substring(0, s.length() - 1));
+            } else
+                permutationsAux(base + s.charAt(0), s.substring(1));
+
+        }
+    
+    }
+    public static void permutations(String s) {
+        permutationsAux("", s);
+    }
+}
