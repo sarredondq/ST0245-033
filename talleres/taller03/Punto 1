@@ -1,0 +1,20 @@
+  private static void torresDeHannoiAux(int n, int origen, int
+intermedio, int destino) {
+ 
+    if ( n== 1){
+      //  Move Disk 1 from A to C
+        System.out.println(origen+" hasta "+destino);
+    }else{
+        torresDeHannoiAux(n - 1,origen,destino,intermedio);
+
+         System.out.println(origen+" hasta "+destino);        
+    //Move Disk topN from A to C
+         torresDeHannoiAux(n- 1, intermedio, origen, destino);
+         
+
+}
+    }
+public static void torresDeHannoi(int n) {
+ torresDeHannoiAux(n, 1, 2, 3);
+
+}
