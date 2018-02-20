@@ -1,0 +1,57 @@
+   public static void main(String[] args) {
+     /* long ahora = System.currentTimeMillis();
+        ArraySum(f(100000000));
+       
+        long deNuevo = System.currentTimeMillis();
+        long haPasado = deNuevo -  ahora;
+        System.out.println(haPasado);*/
+      
+        
+          /*
+              long ahora = System.currentTimeMillis();
+              tablas(50000);
+              long deNuevo = System.currentTimeMillis();
+        long haPasado = deNuevo -  ahora;
+        System.out.println(haPasado);*/
+          
+          
+        
+    }
+    
+    
+    public static void ArraySum(int A[]) {
+
+        int sum=0;
+        
+        for (int i = 0; i <= A.length-1; i++) {
+            sum =sum +A[i];
+            
+        }
+        System.out.println(sum);
+    }
+    
+    
+    
+    public static int[] f(int size) {
+        int max = 20;
+        int[] array = new int[size];
+        Random generator = new Random();
+        for (int i =0; i<size; i++)
+            array[i] = generator.nextInt(max);
+        return array;
+    }
+    
+    
+    
+      public static int tablas(int n){
+         int h=1;
+          for (int i = 1; i <=  n; i++) {
+              for (int j = 1; j <= n ;  j++) {
+                  
+                  h= i * j ;
+              }
+              
+          }
+          return h;
+          
+    }
